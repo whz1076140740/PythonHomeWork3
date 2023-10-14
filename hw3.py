@@ -7,6 +7,7 @@
 #  "Hakuna matata", "Timon, Pumba and Simba are friends, but Simba could eat the other two."] 
 #
 
+#%%
 # 2)
 # Create a function called "get_day_month_year" that takes 
 # a list of datetimes.date and returns a pandas dataframe
@@ -14,7 +15,20 @@
 # is an element of the input list and has as value its 
 # day, month, and year.
 # 
+import pandas as pd
+from datetime import date
 
+
+def get_day_month_year(my_date):
+    days=list(map(lambda d:d.day ,my_date))
+    months=list(map(lambda d:d.month ,my_date))
+    year=list(map(lambda d:d.year ,my_date))
+    data={'day':days,'month':months,'year':year}
+    df= pd.DataFrame(data)
+    return df 
+
+
+#%%
 # 3) 
 # Create a function called "compute_distance" that takes
 # a list of tuple pairs with latitude and longitude coordinates and 
