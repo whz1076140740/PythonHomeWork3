@@ -19,7 +19,7 @@ setup(
 
     url='https://github.com/whz1076140740/PythonHomeWork3',
     author='wu_hangze',
-    author_email='1076140740@qq.com',
+    author_email='hangze.wu@bse.eu',
 
     description = "python HW 3 library",
     long_description = long_description,
