@@ -1,0 +1,2 @@
+#requirements.txt file is use to specify dependency of each projects
+numpy
