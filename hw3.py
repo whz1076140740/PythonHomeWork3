@@ -36,7 +36,17 @@ def get_day_month_year(my_date):
 # example input: [((41.23,23.5), (41.5, 23.4)), ((52.38, 20.1),(52.3, 17.8))]
 # HINT: You can use geopy.distance in order to compute the distance
 #
+ 
+import geopy.distance as gd
+def compute_distance(geoInputs):
+    #list comparision
+    distancePairs = [gd.geodesic(pair[0],pair[1]).kilometers for pair in geoInputs]
+    return distancePairs
 
+geoCoordiSets = [((41.23,23.5), (41.5, 23.4)), ((52.38, 20.1),(52.3, 17.8))]
+print(compute_distance(geoCoordiSets),"unit in kilometer")
+
+#%%
 #################################################
 # 4)
 # Consider a list that each element can be an integer or
@@ -49,4 +59,18 @@ def get_day_month_year(my_date):
 # the result should be 13
 #
 
+def recursive_Sum(integerSets):
+    sum = 0
+    for integerList in integerSets:
+        # if is int type, we return and sum together
+        if type(integerList) == int: sum += integerList
 
+        #else is a nested List, we recursive deep down
+        else: sum += recursive_Sum(integerList)
+    return sum
+
+
+integerNestedList = [[2], 4, 5, [1, [2], [3, 5, [7,8]], 10], 1]
+print("sum is: ", recursive_Sum(integerNestedList))
+
+# %%
