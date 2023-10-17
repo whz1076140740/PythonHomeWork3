@@ -73,4 +73,3 @@ def recursive_Sum(integerSets):
 integerNestedList = [[2], 4, 5, [1, [2], [3, 5, [7,8]], 10], 1]
 print("sum is: ", recursive_Sum(integerNestedList))
 
-# %%
