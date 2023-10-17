@@ -5,7 +5,11 @@
 # strings. Example: 
 # ["Simba and Nala are lions.", "I laugh in the face of danger.",
 #  "Hakuna matata", "Timon, Pumba and Simba are friends, but Simba could eat the other two."] 
-#
+
+from functools import reduce
+
+s=["Simba and Nala are lions.", "I laugh in the face of danger.","Hakuna matata", "Timon, Pumba and Simba are friends, but Simba could eat the other two."]
+sum(map(lambda sentence: sum(map(lambda x: 1 if 'Simba' in x else 0,sentence.split())), s))  
 
 #%%
 # 2)
