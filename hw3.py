@@ -24,8 +24,8 @@ def get_day_month_year(my_date):
     months=list(map(lambda d:d.month ,my_date))
     year=list(map(lambda d:d.year ,my_date))
     data={'day':days,'month':months,'year':year}
-    df= pd.DataFrame(data)
-    return df 
+    edited_data= pd.DataFrame(data)
+    return edited_data 
 
 
 #%%
